@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azeitona Crítica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="./imagens/logo-azeitona.png" alt="Logo azeitona crítica">
+        <h1>Azeitona Crítica</h1>
+        <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5d3e3f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        <nav>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#livros">Livros</a></li>
+                <li><a href="#ocidental">Ocidental</a></li>
+                <li><a href="#japao">Japão</a></li>
+                <li><a href="#coreia">Coréia</a></li>
+                <li><a href="#china">China</a></li>
+            </ul>
+
+            <ul id="menu2">
+                <li class="hideOnMobile"><a href="#home">Home</a></li>
+                <li class="hideOnMobile"><a href="#livros">Livros</a></li>
+                <li class="hideOnMobile"><a href="#ocidental">Ocidental</a></li>
+                <li class="hideOnMobile"><a href="#japao">Japão</a></li>
+                <li class="hideOnMobile"><a href="#coreia">Coréia</a></li>
+                <li class="hideOnMobile"><a href="#china">China</a></li>
+                <div class="icon-img">
+                    <a href="https://www.instagram.com/amanda.olivfre/?next=%2F" rel="externos" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACKUlEQVR4nO1Wy04UQRSd+MCVj626QX9h1MXoUI9zKt07kKR/QtG1Isn8gw/0C3z8hgmCCRo3iu6VDwDcjcHc5hYhk+mZrmaILuYmlXS6+9xz7qNuVas1tan97+ZCmLPAOwdsW+CPI/dHLfnHAr8E473vNiZut9tnHflqHGENQS/FV3rkPCTfdeQjk2WzvV7v1Dic/NMN4Zolly2wV4ogV9PIQ5iL5Ia80WpoAG5GEYa8UxtopeYiAHjchNgCzzy5VD6TTzSYN7UdOGC7VJ1ls4Pf8jw/54AHDtiQ6MoIgXUhLIpiRknfW/KpPAO4rmX4mRJBX0BFUZw++t57f9UCX0Y03WeSV45ixIc2Y79+BnjgcDDySG7JrxaY73Q652UZ7xccsKXfPsVMjPKXLMACD7UvvpG8OIiRd4ciQrg/eQHkR03lfBXOh3BXRa5PXIA7mAf7kvIqXJ7nFxS7cxICdsYJKMtwYgKAjXJrer8wAreojfhh4gI8uaT13RrWhMaYS5b8oX1yb+ICiqKYkX2uEX6XhpOaa90XI7kDNgcPn2QBtmIQyZCJIoYuYLObZZePP4hQPYolE7LPpc66M3YtuSZpH3bsNhrFjnyroOXaoOpgVjQDr2uDvPddBe3JkdqU3Ht/ywK/dTreTgJbcjWKkCNVLhl1LiRS8zLtwEokd+SLZPXGmDNRxLEW8Fx8JQuIJjcZuUxIE8XdMeYO2Jd/S0xq2qc2tdY/sL8rHa3FqCHT2gAAAABJRU5ErkJggg==" alt="instagram-new" class="img1"></a>
+                    <a href="https://web.whatsapp.com/" rel="externos" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC+UlEQVR4nO1WW4hNURjeLpNyLyIluZRbSJ3ycDKzLt+35hyaNw5yyYMmDx6Qa0rzIBkPMq9I5lFEZEiaB1Lk8oqYeFBCo1xHZmJG/7H2aTvjnL33zLyo+Wp3Tnv/l+9fa/3fv4JgGMNIgdpcboa2drsh2wzwzJBfNNBlgA5N3rLkrlrn5gRDDQBTDNCsgR+G7Kv2aOCXBi4AmDskyY1zVpMfwuCGvKat3aacW6KUmkpyUh25SAObJLEhe7ztNw2sGVxycksY0ADtdeTSWB9j5mngkl+RXkPuHVByTSoNdPtAx5uamkamIg/s8yvWm3ollFKTNfDeJz+RlnyURLgdJGcldtTkMZ/8bqFQGCXv5LdYFXkozWpo4LKP1ZrIIZvNTii2FtlrrV0RqeZw5LSvTkpAzoScIw38VLnc7HgHcl1Yfdn7txECbUEK+O7o0+TOJARafZLo6R1RpgHflVKjkxJQzm32nXQzCds7ni3+IgbcLxEAdgcpIDrh/TpijQ3wQozFqYzY+pLakbm0XRV2Q6yxJl8WExmzoB858oqv5LVSamYqKf9D4HMSAg/E2Fpryr/l8/mJfgjJKjyJkpT/hjwoycr9rLXLPPGnsQQMcMYnOFCxrYBXvqIusQMwP9w6Q34V5YweUkM2evursQSUtRs8gYfVxrIBHlebiKInob0GrvtvjbEEnHPjNPmp6OBcXSW7TCZTI9WHk7LsuVgqyLnlfkR3W2unxxIQaPJIOAGDGOTz+THK2rWGPGXI8xrYGi6/l+/bPlZLkBTa2v2p9LsCZJD5OJ1yd0juCLR7x40DSewrb/Yxev7VURXR0NAwVmRX9s05N03V1y/Uzu0wwLlqZ6JE3phsqJqy7yLDqdhba1eFzhp40++AAY+k3+WqJuSstYsVQH8g70XU8p0iVwZpoYGTZUk7i9MMaDHkxwSXUrklHxXRSp08VEJN3tDkHmmh6OVDWtQ6V9DAaalWZFuTz2WAafKsdINSanwwGGQymZpBBRjG/4bfvg6uvFK2xYEAAAAASUVORK5CYII=" alt="whatsapp--v1" class="img2"></a>
+                    
+                </div>
+            </ul>
+        </nav>
+
+        <script>
+            function showSidebar(){
+                const sidebar = document.querySelector('.sidebar');
+                sidebar.style.display = 'flex'
+            }
+            function hideSidebar(){
+                const sidebar = document.querySelector('.sidebar');
+                sidebar.style.display = 'none'
+            }
+        </script>
+    </header>
+
+    <main>
+        <section>
+            <div class="carousel">
+                <div class="group">
+                    <div class="card">1</div>
+                    <div class="card">2</div>
+                    <div class="card">3</div>
+                    <div class="card">4</div>
+                    <div class="card">5</div>
+                    <div class="card">6</div>
+                </div>
+                <div aria-hidden="" class="group">
+                    <div class="card">1</div>
+                    <div class="card">2</div>
+                    <div class="card">3</div>
+                    <div class="card">4</div>
+                    <div class="card">5</div>
+                    <div class="card">6</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="noticias">
+            <div class="grid-wrapper1">
+                <img src="./imagens/Roube como um artista_Prancheta 1_Prancheta 1.jpg" alt="Capa do livro 'Roube como um artista'">
+                <h2>Data</h2>
+                <h1>Título</h1>
+            </div>
+
+            <div class="grid-wrapper2">
+                <img src="" alt="">
+                <h2>Data</h2>
+                <h1>Título</h1>
+            </div>
+
+            <div class="grid-wrapper3">
+                <img src="" alt="">
+                <h2>Data</h2>
+                <h1>Título</h1>
+            </div>
+
+            <div class="grid-wrapper4">
+                <img src="" alt="">
+                <h2>Data</h2>
+                <h1>Título</h1>
+            </div>
+
+            <div class="grid-wrapper5">
+                <img src="" alt="">
+                <h2>Data</h2>
+                <h1>Título</h1>
+            </div>
+
+            <div class="grid-wrapper6">
+                <img src="" alt="">
+                <h2>Data</h2>
+                <h1>Título</h1>
+            </div>
+
+            <div class="grid-wrapper7">
+                <img src="" alt="">
+                <h2>Data</h2>
+                <h1>Título</h1>
+            </div>
+
+            <div class="grid-wrapper8">
+                
+            </div>
+
+        </section>
+
+
+        <section>
+
+        </section>
+
+    </main>
+    
+</body>
+</html>
