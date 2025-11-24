@@ -11,16 +11,16 @@
     <header>
         <img src="./imagens/logo-azeitona.png" alt="Logo azeitona crítica">
         <h1>Azeitona Crítica</h1>
-        <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="https://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5d3e3f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5d3e3f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
         <nav>
             <ul class="sidebar">
-                <li onclick="hideSidebar()"><a href="#"><svg xmlns="https://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#livros">Livros</a></li>
-                <li><a href="#ocidental">Ocidental</a></li>
-                <li><a href="#japao">Japão</a></li>
-                <li><a href="#coreia">Coréia</a></li>
-                <li><a href="#china">China</a></li>
+                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Livros</a></li>
+                <li><a href="#">Ocidental</a></li>
+                <li><a href="#">Japão</a></li>
+                <li><a href="#">Coréia</a></li>
+                <li><a href="#">China</a></li>
             </ul>
 
             <ul id="menu2">
@@ -47,6 +47,15 @@
                 const sidebar = document.querySelector('.sidebar');
                 sidebar.style.display = 'none'
             }
+
+            document.querySelectorAll(".sidebar .dropdown > a").forEach(drop => {
+            drop.addEventListener("click", function(e) {
+            e.preventDefault();
+            this.parentElement.classList.toggle("open");
+                });
+            });
+
+
         </script>
     </header>
 
