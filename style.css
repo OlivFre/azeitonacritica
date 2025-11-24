@@ -145,8 +145,62 @@ header > nav > .sidebar > li > a{
     .menu-button {
         display: block;
     }
-    
 }
+
+.sidebar > .dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.sidebar .dropdown > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebar .dropdown > a .arrow {
+    border: solid var(--color4);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(45deg);
+    transition: transform .3s ease;
+    margin-left: 8px;
+}
+
+.sidebar .dropdown.open > a .arrow {
+    transform: rotate(-135deg);
+}
+
+.sidebar .dropdown_menu {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .35s ease;
+    background: var(--color6);
+    padding-left: 12px;
+}
+
+.sidebar .dropdown_menu li {
+    list-style: none;
+}
+
+.sidebar .dropdown_menu li a {
+    padding: 12px 0;
+    display: block;
+    height: 100%;
+    padding: 4px 16px;
+    text-decoration: none;
+    color: var(--color2);
+}
+
+.sidebar .dropdown.open .dropdown_menu {
+    display: flex;
+    max-height: 300px;
+}
+
 
 
 /*------------SECTION 1--------------*/
