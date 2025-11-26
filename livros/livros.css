@@ -41,8 +41,7 @@ section {
 
 .tab-nav-bar {
     position: relative;
-    margin: 65px 10px 40px 10px;
-}
+    margin: 56px 0px 15px 0px;}
 
 .tab-navigation {
     position: relative;
@@ -54,40 +53,36 @@ section {
 }
 
 .tab-menu {
-    color: var(--color2);
     list-style: none;
-    background: var(--color6);
+    background: var(--color2);
     max-width: 800px;
     padding: 10px;
     white-space: nowrap;
-    border-bottom: 1px solid var(--color1);
-    border-radius: 50px;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.326);
     user-select: none; /*controla se o usuário pode selecionar texto*/
 }
 
 .tab-btn {
-    color: var(--color2);
+    color: var(--color4);
     display: inline-block;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 400;
     margin: 0 2px;
     padding: 10px 20px;
-    border-radius: 30px;
     border: 2px solid var(--color1);
     cursor: pointer;
     user-select: none;
     transition: .3s ease;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.19);
 }
 
 .tab-btn:hover {
-    background: var(--color1);
-    color: var(--color6);
+    background: var(--color6);
+    color: var(--color2);
 }
 
 .tab-btn.active {
-    background: var(--color3);
-    color: var(--color6);
+    background: var(--color5);
+    color: var(--color2);
 }
 
 /*-----------tab content----------*/
@@ -122,22 +117,26 @@ section {
 .tab .row {
     width: 100%;
     display: flex;
-    justify-content: center;
+    margin: 32px 0 40px 0;
+}
+
+.tab .left-column{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
-    margin: 50px 0;
-    gap: 30px;
 }
 
 .tab .img-card {
     position: relative;
-    width: 450px;
-    max-width: 450px;
+    width: 144px;
+    height: 144px;
     border-radius: 20px;
     overflow: hidden;
     display: flex;
     justify-content: center;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.386);
     align-items: center;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.386);
 }
 
 .tab .img-card img {
@@ -145,16 +144,17 @@ section {
 }
 
 .right-column {
-    max-width: 800px;
+    width: 100%;
+    
 }
 
 .info .titulo, .info .description {
     color: black;
-    margin-bottom: 10px;
+    padding: 0px 0 0px 16px;
 }
 
 .info .titulo {
-    font-size: 2em;
+    font-size: 1.7em;
 }
 
 /*------------media query-----------*/
