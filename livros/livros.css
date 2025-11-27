@@ -89,8 +89,6 @@ section {
 
 .tab-content {
     position: relative;
-    display: flex;
-    justify-content: center;
     width: 100%;
 }
 
@@ -116,16 +114,17 @@ section {
 
 .tab .row {
     width: 100%;
-    display: flex;
     margin: 32px 0 40px 0;
 }
+
 
 .tab .left-column{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: stretch;
 }
+
 
 .tab .img-card {
     position: relative;
@@ -143,17 +142,17 @@ section {
     width: 100%;
 }
 
-.right-column {
+.tab .row .left-column .right-column {
     width: 100%;
     
 }
 
-.info .titulo, .info .description {
+.tab .row .left-column .right-column .info .titulo, .tab .row .left-column .right-column .description {
     color: black;
     padding: 0px 0 0px 16px;
 }
 
-.info .titulo {
+.tab .row .left-column .right-column .info .titulo {
     font-size: 1.7em;
 }
 
