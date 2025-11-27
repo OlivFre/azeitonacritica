@@ -57,7 +57,6 @@ section {
     background: var(--color2);
     max-width: 800px;
     padding: 10px;
-    white-space: nowrap;
     user-select: none; /*controla se o usuário pode selecionar texto*/
 }
 
@@ -152,8 +151,14 @@ section {
     padding: 0px 0 0px 16px;
 }
 
+.tab .row .left-column .right-column .description {
+    font-size: 1em;
+    width: 100%;
+    text-align: justify;
+}
+
 .tab .row .left-column .right-column .info .titulo {
-    font-size: 1.7em;
+    font-size: 1.4em;
 }
 
 /*------------media query-----------*/
@@ -175,13 +180,38 @@ section {
         flex-direction: column;
     }
 
-    .tab .img-card {
-    width: auto;
-    max-width: 600px;
-    }
+    
 
     .country {
         font-size: 10vw;
         padding-bottom: 50px;
+    }
+}
+
+/* ----- RESPONSIVO PARA TABS ----- */
+@media screen and (max-width: 480px) {
+
+    .tab-navigation {
+        max-width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .tab-navigation::-webkit-scrollbar {
+        display: none; /* Chrome e outros */
+    }
+
+    .tab-menu {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px;
+        width: max-content; /* impede quebra e habilita scroll */
+        
+    }
+
+    .tab-btn {
+        flex: 0 0 auto; /* mantém tamanho fixo */
+        padding: 10px 16px;
+        font-size: 1em;
     }
 }

@@ -142,7 +142,7 @@ nav > .sidebar > li > a{
         display: block;
     }
 }
-@media screen and (min-width: 481px){
+@media screen and (min-width: 480px){
 
     header {
         display: flex;
