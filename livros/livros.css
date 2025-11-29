@@ -198,7 +198,7 @@ section {
     }
 
     .tab-navigation::-webkit-scrollbar {
-        display: none; /* Chrome e outros */
+        display: none; /*  Chrome e outros */
     }
 
     .tab-menu {

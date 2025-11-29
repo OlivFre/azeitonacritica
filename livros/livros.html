@@ -7,40 +7,31 @@
     <link rel="stylesheet" href="../navstyle.css">
     <link rel="stylesheet" href="livros.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
     
 </head>
 <body>
     
-    <header>
+    <header class="header">
         <img src="./img/logo-azeitona.png" alt="Logo azeitona crítica">
         <h1>Azeitona Crítica</h1>
         <div class="logo">
             <img src="./img/logo-azeitona.png" alt="Logo azeitona crítica">
             <h1>Azeitona Crítica</h1>
         </div>
-        <ul>
-            <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5d3e3f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-        </ul>
-        <nav>
-            <ul class="sidebar">
-                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="./livros/livros.html" rel="next" target="_self" >Livros</a></li>
-                <li><a href="#">Ocidental</a></li>
-                <li><a href="#">Japão</a></li>
-                <li><a href="#">Coréia</a></li>
-                <li><a href="#">China</a></li>
-            </ul>
-
-            <ul id="menu2">
-                <li class="hideOnMobile"><a href="#">Home</a></li>
-                <li class="hideOnMobile"><a href="#">Livros</a></li>
-                <li class="hideOnMobile"><a href="#">Ocidental</a></li>
-                <li class="hideOnMobile"><a href="#">Japão</a></li>
-                <li class="hideOnMobile"><a href="#">Coréia</a></li>
-                <li class="hideOnMobile"><a href="#">China</a></li>
-            </ul>
+        
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="../index.html" class="nav__logo">
+                    <img src="./img/logo-azeitona.png" alt="Logo azeitona crítica">
+                </a>
+            </div>
         </nav>
+
+
 
         <script>
             function showSidebar(){

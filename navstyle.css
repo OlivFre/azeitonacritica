@@ -14,12 +14,18 @@
 
     --font-xanh: "Xanh Mono", monospace;
 
-    --color1: #D6B6A9;
-    --color2: #F9F2EA;
-    --color3: #B7C0AD;
-    --color4: #7B8471;
-    --color5: #877082;
-    --color6: #684660;
+    --color1: #ebe5d9;
+    --color2: #d8c9b6;
+    --color3: #abad97;
+    --color4: #687540;
+    --color5: #584638;
+    --color6: #314430;
+
+    --box_shadow: 1px 1px 5px rgba(0, 0, 0, 0.278);
+
+    --z-tooltip:10;
+    --z-fixed:100;
+
 }
 
 * {
@@ -35,181 +41,91 @@ body {
 
 p, h1, h2 {
     font-family: garamond, serif;
-
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 24px;
-}
-
-header > .logo {
-    display: none;
-}
-
-header > img{
-    width: 96px;
-    height: auto;
-    margin: 8px 0 8px 0;
-}
-
-header > h1{
-    font-family: var(--font-xanh);
-    font-size: 1.8em;
-    color: var(--color4);
-    text-align: center;
-}
-
-nav {
-    background-color: var(--color2);
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.11);
-}
-    
-nav > ul{
-    width: 100%;
+ul {
     list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
 }
 
-nav > ul > li{
-    height: 50px;
-}
-
-nav > ul > li:first-child{
-    margin-right: auto;
-}
-
-nav > .sidebar > li > a {
-    height: 100%;
-    padding: 0 24px;
+a {
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: var(--color4);
-}
-nav > ul > li > a:hover{
-    background-color: var(--color5);
-    color:var(--color2)
-}
-nav > ul > li > a > svg {
-    fill: var(--color4);
 }
 
-nav > ul > li > a:hover > svg {
-    fill: var(--color2);
+
+/*================REUSABLE CSS CLASSES==============*/
+
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
 }
 
-nav > .sidebar {
+
+
+/*===================HEADER==================*/
+
+.header {
     position: fixed;
     top: 0;
-    right: 0;
-    height: 100vh;
-    width: 180px;
-    z-index: 100;
+    left: 0;
+    width: 100%;
     background-color: var(--color2);
-    backdrop-filter: blur(10px);
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    box-shadow: var(--box_shadow);
+    z-index: var(--z-fixed);
 }
 
-nav > .sidebar > li{
-    width: 100%;
+
+
+
+/*====================NAV==================*/
+
+.nav {
+    height: 72px;
 }
 
-nav > .sidebar > li > a{
-    width: 100%;
-}
 
-.menu-button {
-    display: none;
-    color: var(--color6);
-}
-
-@media screen and (max-width: 480px) {
-    .hideOnMobile{
-        display: none;
-    }
-    .menu-button {
-        display: block;
-    }
-}
-@media screen and (min-width: 480px){
-
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        box-shadow: none;
-    }
-
-    header > img, header > h1 {
-        display: none;
-    }
-
-    header > .logo {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-        flex-wrap: nowrap;
-        justify-content: center;
-        
-    }
-
-    header > .logo > img{
-        width: 96px;
-        height: auto;
-        margin: 8px 0 8px 0;
-    }
-
-    header > .logo > h1{
-        font-family: var(--font-xanh);
-        font-size: 2em;
-        color: var(--color4);
-        text-align: center;
-    }
-
-    #menu2 {
-        list-style: none;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: stretch;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        border: 2px solid var(--color4);
-        box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.19);
-    }
-
-    #menu2 > li {
-        width: 100%;
-        
-    }
-
-    nav > #menu2 > li > a {
+.nav__data {
     height: 100%;
-    text-decoration: none;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    color: var(--color4);
-    justify-content: space-around;
-    
 }
 
-nav > #menu2 > li > a:hover {
-    color: var(--color2);
+.nav__logo {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
+    font-family: var(--font-xanh);
 }
 
+.nav__logo > img {
+    height: 72px;
+    width: 72px;
+}
 
-
+.nav__toggle {
+    position: relative;
+    width: 32px;
+    height: 32px;
 
 }
+
+.nav__burger, 
+.nav__close {
+    color: var(--color5);
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    inset: 0;
+    margin: auto;
+    font-size: 1.25rem;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity .1s, transform .4s;
+}
+
+.nav__close{
+    opacity: 0;
+}
+
+/*================NAV MENU===============*/
 
