@@ -85,18 +85,10 @@ nav {
     z-index: 1000;
 }
     
-nav > ul{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start; /* importante */
-    flex-direction: row;
-}
+
 
 nav > ul > li {
-    min-height: 50px;
-    position: relative;
-    
+    height: 50px;
 }
 
 nav > ul > li.dropdown:hover, nav > ul > li.dropdown.open {
@@ -140,7 +132,6 @@ nav > .sidebar {
     background-color: var(--color2);
     backdrop-filter: blur(10px);
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -150,15 +141,8 @@ nav > .sidebar {
     width: 100%;
 }
 
-.sidebar > li > a{
-    width: 100%;
-    transform-origin: top;
-    transition: transform .2s ease;
-    display: block;
-}
-
-.sidebar > li > a:hover {
-    padding: 24px 16px; /* aumenta só a altura */
+.sidebar > li > a {
+    font-size: 1.1em;
 }
 
 .menu-button {
@@ -174,60 +158,6 @@ nav > .sidebar {
         display: block;
     }
 }
-
-/*=====================DROPDOWN====================*/
-
-.dropdown {
-    position: relative;
-    z-index: 9999;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0px);
-    
-
-}
-.dropdown-btn {
-    cursor: pointer;
-    color: var(--color4);
-    width: 100%;
-}
-
-.dropdown-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    top: 100%;
-    left: 0;
-    background: var(--color2);
-    padding-left: 20px;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all .25s ease;
-    position: static;
-    z-index: 9999;
-}
-
-.dropdown-menu > li {
-    background: var(--color2);
-    font-size: 1em;
-    padding: 8px 0;
-}
-
-.dropdown-menu > li > a {
-    color: var(--color5);
-}
-
-nav > ul > li.dropdown:hover > .dropdown-menu,
-nav > ul > li.dropdown.open > .dropdown-menu {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-    
-}
-
 
 
 
@@ -274,50 +204,13 @@ nav > ul > li.dropdown.open > .dropdown-menu {
         display: none;
     }
 
-    
 
-    #menu2 {
+    nav > #menu2 {
         width: 100%;
         list-style: none;
         display: flex;
-        justify-content: space-around;
-        align-items: stretch;
-        flex-direction: row;
-        flex-wrap: nowrap;
 }
 
-/*=====================DROPDOWN====================*/
-.dropdown {
-    position: relative;
-}
 
-.dropdown .dropdown-menu.desktop {
-    position: absolute;
-    background: var(--color2);
-    padding: 8px 0;
-    width: 160px;
-    box-shadow: 0 4px 10px rgba(0,0,0,.15);
-    border-radius: 4px;
-    display: none;
-}
-
-.dropdown:hover .dropdown-menu.desktop {
-    display: block;
-}
-
-.dropdown-menu.desktop li {
-    list-style: none;
-}
-
-.dropdown-menu.desktop li a {
-    display: block;
-    padding: 10px 14px;
-    color: var(--color4);
-}
-
-.dropdown-menu.desktop li a:hover {
-    background: var(--color5);
-    color: var(--color2);
-}
 
 }
