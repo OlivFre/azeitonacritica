@@ -179,12 +179,13 @@ nav > .sidebar {
 
 .dropdown {
     position: relative;
+    z-index: 9999;
 }
 
 .dropdown:hover .dropdown-menu {
     display: flex;
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0px);
     
 
 }
@@ -198,7 +199,9 @@ nav > .sidebar {
     display: none;
     flex-direction: column;
     width: 100%;
-    background: var(--color4);
+    top: 100%;
+    left: 0;
+    background: var(--color2);
     padding-left: 20px;
     opacity: 0;
     transform: translateY(10px);
@@ -208,13 +211,13 @@ nav > .sidebar {
 }
 
 .dropdown-menu > li {
-    background: var(--color4);
+    background: var(--color2);
     font-size: 1em;
     padding: 8px 0;
 }
 
 .dropdown-menu > li > a {
-    color: var(--color2);
+    color: var(--color5);
 }
 
 nav > ul > li.dropdown:hover > .dropdown-menu,
