@@ -152,6 +152,13 @@ nav > .sidebar {
 
 .sidebar > li > a{
     width: 100%;
+    transform-origin: top;
+    transition: transform .2s ease;
+    display: block;
+}
+
+.sidebar > li > a:hover {
+    padding: 24px 16px; /* aumenta só a altura */
 }
 
 .menu-button {
