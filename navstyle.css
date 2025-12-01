@@ -207,19 +207,14 @@ nav > .sidebar {
     }
 
     nav > #menu2 > li {
-        justify-items: center;
         width: 100%;
-        padding: 0 0;
-        
-    
     }
 
-    nav > ul > li:first-child{
-        display: none;
-    }
+    
 
     nav > #menu2 > li > a {
-        /*padding: 0 0;*/
+        padding: 0 0;
+        justify-content: center;
     }
 
 
@@ -227,8 +222,6 @@ nav > .sidebar {
 
     #menu2 {
         list-style: none;
-        display: flex;
-        justify-content: space-evenly;
 }
 
 
