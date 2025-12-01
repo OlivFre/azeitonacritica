@@ -160,6 +160,15 @@ body {
     padding: 16px 0;
 }
 
+.noticias > .perfil > ul > li {
+
+}
+
+.noticias > .perfil > ul > li > a > svg {
+    height: 20px;
+    width: 20px;
+}
+
 /*-------------------------------------------------*/
 
 
