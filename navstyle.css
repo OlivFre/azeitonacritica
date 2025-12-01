@@ -81,22 +81,21 @@ header > h1{
 nav {
     background-color: var(--color2);
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.11);
-    position: relative;
-    z-index: 1000;
-}
     
+}
 
+nav > ul{
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
 
 nav > ul > li {
     height: 50px;
 }
 
-nav > ul > li.dropdown:hover, nav > ul > li.dropdown.open {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    
-}
 
 nav > ul > li:first-child{
     margin-right: auto;
@@ -122,13 +121,15 @@ nav > ul > li > a:hover > svg {
     fill: var(--color2);
 }
 
+
+
 nav > .sidebar {
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
     width: 180px;
-    z-index: 100;
+    z-index: 999;
     background-color: var(--color2);
     backdrop-filter: blur(10px);
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
@@ -147,7 +148,6 @@ nav > .sidebar {
 
 .menu-button {
     display: none;
-    color: var(--color6);
 }
 
 @media screen and (max-width: 480px) {
@@ -162,6 +162,12 @@ nav > .sidebar {
 
 
 @media screen and (min-width: 481px){
+
+
+
+    nav > .sidebar {
+        display: none;
+    }
 
     header {
         display: flex;
@@ -200,15 +206,29 @@ nav > .sidebar {
         width: 100%;
     }
 
+    nav > #menu2 > li {
+        justify-items: center;
+        width: 100%;
+        padding: 0 0;
+        
+    
+    }
+
     nav > ul > li:first-child{
         display: none;
     }
 
+    nav > #menu2 > li > a {
+        /*padding: 0 0;*/
+    }
 
-    nav > #menu2 {
-        width: 100%;
+
+
+
+    #menu2 {
         list-style: none;
         display: flex;
+        justify-content: space-evenly;
 }
 
 
