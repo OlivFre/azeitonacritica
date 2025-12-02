@@ -216,14 +216,13 @@ nav > .sidebar {
     nav > #menu2 > li > a {
         padding: 0 0;
         justify-content: center;
+        font-size: 1.1em;
     }
-
-
-
 
     #menu2 {
         list-style: none;
-}
+    }
+
 
 
 

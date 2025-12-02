@@ -219,15 +219,33 @@ body {
 
     .noticias > .news {
         width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .noticias > .news > .grid-wrapper1 {
+        grid-column: 1/3;
     }
 
     
-
 
     .noticias > .perfil {
         width: 20%;
         border: 2px solid var(--color4);
         padding: 16px;
+    }
+
+    .noticias > .news > div > h2 {
+        font-size: 1em;
+    }
+
+    .noticias > .news > div > h1 {
+        font-size: 1.5em;
+    }
+
+    .perfil > p {
+        font-size: 1.1em;
     }
 }
 
