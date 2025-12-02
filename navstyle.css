@@ -65,17 +65,20 @@ header > .logo {
     display: none;
 }
 
-header > img{
+header > a > img {
     width: 96px;
     height: auto;
     margin: 8px 0 8px 0;
 }
 
-header > h1{
+header > h1 {
     font-family: var(--font-xanh);
     font-size: 1.8em;
-    color: var(--color4);
     text-align: center;
+}
+
+header > h1 > a {
+    color: var(--color4);
 }
 
 nav {
@@ -176,7 +179,7 @@ nav > .sidebar {
         align-items: center;
     }
 
-    header > img, header > h1 {
+    header > a > img, header > h1 {
         display: none;
     }
 
@@ -190,7 +193,7 @@ nav > .sidebar {
         
     }
 
-    header > .logo > img{
+    header > .logo > a > img{
         width: 96px;
         height: auto;
         margin: 8px 0 8px 0;
@@ -199,8 +202,11 @@ nav > .sidebar {
     header > .logo > h1{
         font-family: var(--font-xanh);
         font-size: 2em;
-        color: var(--color4);
         text-align: center;
+    }
+
+    header > .logo > h1 > a {
+        color: var(--color4);
     }
 
     header > nav {
