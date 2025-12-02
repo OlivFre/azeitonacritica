@@ -136,6 +136,7 @@ nav > .sidebar {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    display: none;
 }
 
 .sidebar > li{
