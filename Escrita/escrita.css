@@ -12,12 +12,14 @@
 
     --font-xanh: "Xanh Mono", monospace;
 
-    --color1: #D6B6A9;
-    --color2: #F9F2EA;
-    --color3: #B7C0AD;
-    --color4: #7B8471;
-    --color5: #877082;
-    --color6: #684660;
+    --color1: #ebe5d9;
+    --color2: #d8c9b6;
+    --color3: #abad97;
+    --color4: #687540;
+    --color5: #584638;
+    --color6: #314430;
+
+    --box_shadow: 1px 1px 5px rgba(0, 0, 0, 0.278);
 }
 
 
@@ -27,191 +29,64 @@
     box-sizing: border-box;
 }
 
-section {
-    position: relative;
-    margin: 0 80px;
-    transition: .5s ease;
+body {
+    background-color: var(--color);
+    width: 100%;
 }
 
-.main-container {
-    position: relative;
+p, h1, h2 {
+    font-family: garamond, serif;
 }
 
-/*-----------tab navigation bar-------------*/
-
-.tab-nav-bar {
-    position: relative;
-    margin: 56px 0px 15px 0px;}
-
-.tab-navigation {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: fit-content;
-    margin: 0 auto;
-}
-
-.tab-menu {
+ul {
     list-style: none;
-    background: var(--color2);
-    max-width: 800px;
-    padding: 10px;
-    user-select: none; /*controla se o usuário pode selecionar texto*/
 }
 
-.tab-btn {
+a {
+    text-decoration: none;
+}
+
+
+/*===========SECTION 1==========*/
+
+.artigos  {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 24px 0;
+}
+
+.artigos > div {
+    padding: 8px;
+    border: 2px solid var(--color6);
+    margin-bottom: 24px;
+}
+
+.artigos > div > img {
+    width: 100%;
+    height: 112px;
+    
+}
+
+.artigos > div > h2 {
     color: var(--color4);
-    display: inline-block;
-    font-size: 1.2em;
-    font-weight: 400;
-    margin: 0 2px;
-    padding: 10px 20px;
-    border: 2px solid var(--color1);
-    cursor: pointer;
-    user-select: none;
-    transition: .3s ease;
-    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.19);
-}
-
-.tab-btn:hover {
-    background: var(--color6);
-    color: var(--color2);
-}
-
-.tab-btn.active {
-    background: var(--color5);
-    color: var(--color2);
-}
-
-/*-----------tab content----------*/
-
-.tab-content {
-    position: relative;
-    width: 100%;
-}
-
-.tab {
-    position: absolute;
-    top: 0;
-    right: auto;
-    bottom: 0;
-    left: auto;
-    max-width: 1100px;
-    padding: 15px;
-    transform: translateX(25px);
-    content-visibility: hidden;
-    opacity: 0;
-}
-
-.tab.active {
-    transform: translateX(0);
-    content-visibility: visible;
-    opacity: 1;
-    transition: 1s ease;
-}
-
-.tab .row {
-    width: 100%;
-    margin: 32px 0 40px 0;
-}
-
-
-.tab .left-column{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: stretch;
-}
-
-
-.tab .img-card {
-    position: relative;
-    width: 144px;
-    height: 144px;
-    border-radius: 20px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.386);
-    align-items: center;
-}
-
-.tab .img-card img {
-    width: 100%;
-}
-
-.tab .row .left-column .right-column {
-    width: 100%;
-    
-}
-
-.tab .row .left-column .right-column .info .titulo, .tab .row .left-column .right-column .description {
-    color: black;
-    padding: 0px 0 0px 16px;
-}
-
-.tab .row .left-column .right-column .description {
     font-size: 1em;
-    width: 100%;
-    text-align: justify;
+    padding-bottom: 4px;
 }
 
-.tab .row .left-column .right-column .info .titulo {
-    font-size: 1.4em;
+.artigos > div > h3 {
+    color: var(--color6);
+    font-size: .88em;
+    padding-bottom: 4px;
 }
 
-/*------------media query-----------*/
-
-@media screen and (max-width: 480px){
-    section {
-        margin: 0 0px;
-    }
-
-    .tab-nav-bar {
-        margin: 65px 20px 40px 25px;
-    }
-
-    .tab {
-        padding: 15px 25px;
-    }
-
-    .tab .row {
-        flex-direction: column;
-    }
-
-    
-
-    .country {
-        font-size: 10vw;
-        padding-bottom: 50px;
-    }
+.artigos > div > h1 {
+    color: var(--color5);
+    font-size: 1.3em;
+    padding-bottom: 4px;
 }
 
-/* ----- RESPONSIVO PARA TABS ----- */
-@media screen and (max-width: 480px) {
-
-    .tab-navigation {
-        max-width: 100%;
-        overflow-x: auto;
-        scrollbar-width: none; /* Firefox */
-    }
-
-    .tab-navigation::-webkit-scrollbar {
-        display: none; /*  Chrome e outros */
-    }
-
-    .tab-menu {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 8px;
-        width: max-content; /* impede quebra e habilita scroll */
-        
-    }
-
-    .tab-btn {
-        flex: 0 0 auto; /* mantém tamanho fixo */
-        padding: 10px 16px;
-        font-size: 1em;
-    }
+.artigos > div > p {
+    font-size: .9em;
+    padding-bottom: 4px;
+    text-align:justify;
 }

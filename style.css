@@ -14,12 +14,14 @@
 
     --font-xanh: "Xanh Mono", monospace;
 
-    --color1: #D6B6A9;
-    --color2: #F9F2EA;
-    --color3: #B7C0AD;
-    --color4: #7B8471;
-    --color5: #877082;
-    --color6: #684660;
+    --color1: #ebe5d9;
+    --color2: #d8c9b6;
+    --color3: #abad97;
+    --color4: #687540;
+    --color5: #584638;
+    --color6: #314430;
+    --color7: #877082;
+    --color8: #684660;
 }
 
 * {
@@ -121,14 +123,18 @@ body {
 }
 
 .noticias > .news > div > h2 {
-    color: var(--color6);
     font-size: .88em;
     padding-bottom: 6px;
+    color: var(--color6);
 
 }
 
+.noticias > .news > div > h2 > a {
+    color: var(--color4);
+}
+
 .noticias > .news > div > h1 {
-    color: black;
+    color: var(--color8);
     font-size: 1.38em;
 
 }
