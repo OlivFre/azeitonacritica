@@ -60,6 +60,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin: 0 16px 0 16px;
+    user-select: none;
 }
 
 header > .logo {
@@ -84,6 +85,7 @@ header > h1 > a {
 
 nav {
     background-color: var(--color1);
+
 }
 
 nav > ul{
