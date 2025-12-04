@@ -14,8 +14,8 @@
 
     --font-xanh: "Xanh Mono", monospace;
 
-    --color1: #ebe5d9;
-    --color2: #d8c9b6;
+    --color1: #fefae0;
+    --color2: #f9ebc7;
     --color3: #abad97;
     --color4: #687540;
     --color5: #584638;
@@ -44,9 +44,6 @@ p, h1, h2 {
 
 /*------------SECTION 1--------------*/
 
-body {
-    background-color: var(--color2);
-}
 
 .carousel {
     margin: 24px auto;
@@ -119,24 +116,34 @@ body {
     justify-items: center;
     width: 100%;
     height: 10.5rem;
-    padding-bottom: 4px;
+    
 }
 
 .noticias > .news > div > h2 {
-    font-size: .88em;
+    font-size: 1em;
     padding-bottom: 6px;
-    color: var(--color6);
+    color: var(--color8);
 
 }
 
 .noticias > .news > div > h2 > a {
+    color: var(--color6);
+}
+
+.noticias > .news > div > h2 > a:hover {
     color: var(--color4);
 }
 
 .noticias > .news > div > h1 {
-    color: var(--color8);
-    font-size: 1.38em;
+    font-size: 1.5em;
+}
 
+.noticias > .news > div > h1 > a {
+    color: var(--color5);
+}
+
+.noticias > .news > div > h1 > a:hover {
+    color: #b99470;
 }
 
 

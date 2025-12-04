@@ -14,12 +14,14 @@
 
     --font-xanh: "Xanh Mono", monospace;
 
-    --color1: #ebe5d9;
-    --color2: #d8c9b6;
+    --color1: #fefae0;
+    --color2: #f9ebc7;
     --color3: #abad97;
     --color4: #687540;
     --color5: #584638;
     --color6: #314430;
+    --color7: #877082;
+    --color8: #684660;
 
     --box_shadow: 1px 1px 5px rgba(0, 0, 0, 0.278);
 
@@ -35,7 +37,6 @@
 }
 
 body {
-    background-color: var(--color2);
     width: 100%;
 }
 
@@ -82,9 +83,7 @@ header > h1 > a {
 }
 
 nav {
-    background-color: var(--color2);
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.11);
-    
+    background-color: var(--color1);
 }
 
 nav > ul{
@@ -124,8 +123,6 @@ nav > ul > li > a:hover > svg {
     fill: var(--color2);
 }
 
-
-
 nav > .sidebar {
     position: fixed;
     top: 0;
@@ -133,7 +130,7 @@ nav > .sidebar {
     height: 100vh;
     width: 180px;
     z-index: 999;
-    background-color: var(--color2);
+    background-color: var(--color1);
     backdrop-filter: blur(10px);
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     flex-direction: column;
@@ -160,6 +157,10 @@ nav > .sidebar {
     }
     .menu-button {
         display: block;
+    }
+
+    header {
+        border-bottom: 2px solid var(--color5);
     }
 }
 
@@ -211,6 +212,8 @@ nav > .sidebar {
 
     header > nav {
         width: 100%;
+        border: 2px solid var(--color8);
+
     }
 
     nav > #menu2 > li {
