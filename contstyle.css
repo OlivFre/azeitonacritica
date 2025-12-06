@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+:root{
+
+    --font-xanh: "Xanh Mono", monospace;
+
+    --color1: #fefae0;
+    --color2: #f9ebc7;
+    --color3: #abad97;
+    --color4: #687540;
+    --color5: #584638;
+    --color6: #314430;
+    --color7: #877082;
+    --color8: #684660;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--color1);
+    width: 100%;
+}
+
+p, h1, h2 {
+    font-family: garamond, serif;
+
+}
+
