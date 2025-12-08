@@ -142,6 +142,10 @@ nav > .sidebar {
     display: none;
 }
 
+.sidebar {
+    display: none;
+}
+
 .sidebar > li{
     width: 100%;
     display: block;
@@ -170,7 +174,7 @@ nav > .sidebar .dropdown-content-mobile {
 }
 
 /* Ao abrir, dá espaço suficiente (ajuste se tiver muitos itens) */
-nav > .sidebar .dropdown-mobile.open > .dropdown-content-mobile {
+nav > .sidebar .dropdown.open > .dropdown-content-mobile {
     max-height: 800px;     /* grande o suficiente para conter os itens e empurrar */
 }
 
@@ -199,6 +203,10 @@ nav > .sidebar .dropdown-mobile.open > .dropdown-content-mobile {
     header {
         border-bottom: 2px solid var(--color5);
     }
+
+    .sidebar.open {
+    display: flex;
+}
 }
 
 /* ==========DROPDOWN DESKTOP============ */
@@ -302,10 +310,16 @@ nav > .sidebar .dropdown-mobile.open > .dropdown-content-mobile {
 
 @media screen and (min-width: 481px){
 
-
+    header > ul > .menu-button {
+        display: none;
+    }
 
     nav > .sidebar {
         display: none;
+    }
+
+    nav > #menu2 {
+        display: flex;
     }
 
     header {
