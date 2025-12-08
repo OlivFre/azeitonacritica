@@ -44,6 +44,9 @@ p, h1, h2 {
 
 /*------------SECTION 1--------------*/
 
+.recomendaçoes {
+    margin: 32px;;
+}
 
 .carousel {
     margin: 24px auto;

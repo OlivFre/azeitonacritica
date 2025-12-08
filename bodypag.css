@@ -48,17 +48,77 @@ a {
     text-decoration: none;
 }
 
-
 /*===========SECTION 1==========*/
 
-.artigos  {
+.recomendaçoes {
+    margin: 32px;;
+}
+
+.carousel {
+    margin: 24px auto;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    gap: 1em;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.group {
+    display: flex;
+    width: max-content;
+    gap: 1em;
+    animation: slide 40s linear infinite;
+    position: relative;
+}
+
+.group::after {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 1em;
+}
+
+.card {
+    width: 3em;
+    height: 4.5em;
+    background-color: var(--color1);
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.258);
+}
+
+.recomendaçoes > h1 {
+    color: var(--color8);
+    font-size: 2.4em;
+    margin: 32px 0;
+}
+@keyframes slide {
+    from {transform: translateX(0);}
+    to {transform: translateX(-100%);}
+}
+
+
+
+
+/*===========SECTION 2==========*/
+
+
+
+.artigos > div {
     display: grid;
     flex-direction: column;
-    margin: 32px 24px 0;
+    margin: 0 32px;
 }
 
 .artigos > div {
-    padding: 8px;
     margin-bottom: 24px;
     display: flex;
     flex-direction: row;
@@ -100,9 +160,14 @@ a {
 
 @media screen and (max-width: 480px){
     
+.recomendaçoes > .carousel > .group-mobile {}
+
+.recomendaçoes > .carousel > .group-desktop {
+    display: none;
+}
 
 .artigos > div > a > img {
-    width: 50%;
+    width: 100%;
     height: auto;
 
 }
@@ -114,6 +179,16 @@ a {
 }
 
 @media screen and (min-width: 481px) {
+    
+    .recomendaçoes > .carousel > .group-mobile {
+    display: none;
+    }
+
+    .recomendaçoes > .carousel > .group-desktop {
+    display: flex;
+    }
+
+    
     .artigos {
         display: grid;
         grid-template-columns: 1fr 1fr ;
