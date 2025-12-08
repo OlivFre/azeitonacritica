@@ -35,7 +35,16 @@
                 </li>
 
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../Livros/livros.html">Livros</a></li>
+
+                <li class="dropdown" onclick="toggleDropdownMobile(event)">
+                    <a href="#">Livros <span class="caret">▾</span></a>
+                    <ul class="dropdown-content-mobile">
+                        <li><a href="../Livros/Escrita Criativa/escritacriativa.html">Escrita Criativa</a></li>
+                        <li><a href="../Livros/Resenhas/resenhas.html">Resenhas</a></li>
+                        <li><a href="../Livros/Light Novels/novels.html">Light Novels</a></li>
+                    </ul>
+                </li>
+
                 <li><a href="../Mangas/mangas.html">Mangas</a></li>
                 <li><a href="../Animes/animes.html">Animes</a></li>
                 <li><a href="../Filmes/filmes.html">Filmes</a></li>
@@ -46,7 +55,16 @@
             <ul id="menu2">
 
                 <li class="hideOnMobile"><a href="../index.html">Home</a></li>
-                <li class="hideOnMobile"><a href="../Livros/livros.html">Livros</a></li>
+                <li class="dropdown hideOnMobile">
+                    <a href="#" onclick="toggleDropdownMobile(event)">
+                        Livros <span class="caret">▾</span>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="../Livros/Escrita Criativa/escritacriativa.html">Escrita Criativa</a></li>
+                        <li><a href="../Livros/Resenhas/resenhas.html">Resenhas</a></li>
+                        <li><a href="../Livros/Light Novels/novels.html">Light Novels</a></li>
+                    </ul>
+                </li>
                 <li class="hideOnMobile"><a href="../Mangas/mangas.html">Mangas</a></li>
                 <li class="hideOnMobile"><a href="../Animes/animes.html">Animes</a></li>
                 <li class="hideOnMobile"><a href="../Filmes/filmes.html">Filmes</a></li>
@@ -57,25 +75,36 @@
         </nav>
 
         <script>
-            function showSidebar(){
-                const sidebar = document.querySelector('.sidebar');
-                sidebar.style.display = 'flex'
+            function showSidebar() {
+                document.querySelector('.sidebar').classList.add('open');
             }
-            function hideSidebar(){
-                const sidebar = document.querySelector('.sidebar');
-                sidebar.style.display = 'none'
+
+            function hideSidebar() {
+                document.querySelector('.sidebar').classList.remove('open');
             }
         </script>
 
+
         <script>
-            function showSidebar(){
-                document.querySelector('.sidebar').style.display = 'flex';
+            function toggleDropdownMobile(event) {
+                event.preventDefault();
+
+                // garante que pegamos o LI mais próximo mesmo se clicar na seta ou no texto
+                const li = (event.target && event.target.closest) ? event.target.closest('li') : null;
+                if (!li) return;
+
+                // remove open de outros dropdowns (comportamento tipo accordion) — opcional
+                const sidebar = li.closest('.sidebar');
+                if (sidebar) {
+                    const others = sidebar.querySelectorAll('.dropdown-mobile.open');
+                    others.forEach(item => {
+                        if (item !== li) item.classList.remove('open');
+                    });
+                }
+
+                // alterna
+                li.classList.toggle('open');
             }
-
-            function hideSidebar(){
-                document.querySelector('.sidebar').style.display = 'none';
-        }
-
         </script>
     </header>
 
