@@ -25,12 +25,88 @@ body {
     width: 100%;
 }
 
-p, h1, h2 {
+p, h1, h2, h3 {
     font-family: garamond, serif;
 
 }
 
-.artigo > p {
-    font-size: 1.6em;
+.artigo {
+    margin: 32px;
 }
 
+.artigo > h1 {
+    color: var(--color8);
+    padding-bottom: 8px;
+}
+
+.artigo > h3 {
+    color: var(--color7);
+    padding-bottom: 36px;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    width: 100%;
+    gap: 24px;
+}
+
+.intro > img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100%;
+    height: auto;
+}
+
+.intro > .info {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 1em;
+    text-align: justify;
+    color: var(--color5);
+}
+
+.intro > .sinopse {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    font-size: 1em;
+    text-align: justify;
+    color: var(--color5);
+}
+
+
+.resenha {
+    margin-top: 24px;
+    font-size: 1em;
+    text-align: justify;
+    color: var(--color5);
+}
+
+.resenha > h2, .resenha > h3, .resenha > q, .resenha > p {
+    padding-bottom: 16px;
+}
+
+.resenha > h3 {
+    color: var(--color8);
+}
+
+.resenha > h3, .resenha > p {
+    padding-top: 16px;
+}
+
+
+@media screen and (max-width: 768px){
+    .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .intro > .sugestoes {
+        display: none;
+    }
+}
+
+
+    
