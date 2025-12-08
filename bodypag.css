@@ -160,7 +160,6 @@ a {
 
 @media screen and (max-width: 480px){
     
-.recomendaçoes > .carousel > .group-mobile {}
 
 .recomendaçoes > .carousel > .group-desktop {
     display: none;
