@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livros</title>
+    <title>Resenhas</title>
     <link rel="stylesheet" href="../../navstyle.css">
     <link rel="stylesheet" href="../../bodypag.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
@@ -17,12 +17,12 @@
     
     <header>
 
-        <a href="../index.html"><img src="../Resenhas/img/logo-azeitona.png" alt="Logo azeitona crítica"></a>
-        <h1><a href="../../index.html">Azeitona Crítica</a></h1>
+        <a href="./index.html"><img src="./imagens/logo-azeitona.png" alt="Logo azeitona crítica"></a>
+        <h1><a href="./index.html">Azeitona Crítica</a></h1>
         
         <div class="logo">
-            <a href="../index.html"><img src="../Resenhas/img/logo-azeitona.png" alt="Logo azeitona crítica"></a>
-            <h1><a href="../../index.html">Azeitona Crítica</a></h1>
+            <a href="./index.html"><img src="./imagens/logo-azeitona.png" alt="Logo azeitona crítica"></a>
+            <h1><a href="./index.html">Azeitona Crítica</a></h1>
         </div>
 
         <ul>
@@ -34,44 +34,25 @@
                     <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
                 </li>
 
-                <li><a href="../../index.html">Home</a></li>
-
-                <li class="dropdown" onclick="toggleDropdownMobile(event)">
-                    <a href="#">Livros <span class="caret">▾</span></a>
-                    <ul class="dropdown-content-mobile">
-                        <li><a href="../Escrita Criativa/escritacriativa.html">Escrita Criativa</a></li>
-                        <li><a href="./resenhas.html">Resenhas</a></li>
-                        <li><a href="../Light Novels/novels.html">Light Novels</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="../../Mangas/mangas.html">Mangas</a></li>
-                <li><a href="../../Animes/animes.html">Animes</a></li>
-                <li><a href="../../Filmes/filmes.html">Filmes</a></li>
-                <li><a href="../../Doramas/doramas.html">Doramas</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Livros/livros.html">Livros</a></li>
+                <li><a href="./Mangas/mangas.html">Mangas/Manhwas</a></li>
+                <li><a href="./Animes/animes.html">Animes</a></li>
+                <li><a href="./Filmes/filmes.html">Filmes</a></li>
+                <li><a href="./Doramas/doramas.html">Doramas</a></li>
                 
             </ul>
 
             <ul id="menu2">
 
-                <li class="hideOnMobile"><a href="../../index.html">Home</a></li>
-                <li class="dropdown hideOnMobile">
-                    <a href="#" onclick="toggleDropdownMobile(event)">
-                        Livros <span class="caret">▾</span>
-                    </a>
-                    <ul class="dropdown-content">
-                        <li><a href="../Escrita Criativa/escritacriativa.html">Escrita Criativa</a></li>
-                        <li><a href="./resenhas.html">Resenhas</a></li>
-                        <li><a href="../Light Novels/novels.html">Light Novels</a></li>
-                    </ul>
-                </li>
-                <li class="hideOnMobile"><a href="../../Mangas/mangas.html">Mangas</a></li>
-                <li class="hideOnMobile"><a href="../../Animes/animes.html">Animes</a></li>
-                <li class="hideOnMobile"><a href="../../Filmes/filmes.html">Filmes</a></li>
-                <li class="hideOnMobile"><a href="../../Doramas/doramas.html">Doramas</a></li>
+                <li class="hideOnMobile"><a href="./index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="./Livros/livros.html">Livros</a></li>
+                <li class="hideOnMobile"><a href="./Mangas/mangas.html">Mangas/Manhwas</a></li>
+                <li class="hideOnMobile"><a href="./Animes/animes.html">Animes</a></li>
+                <li class="hideOnMobile"><a href="./Filmes/filmes.html">Filmes</a></li>
+                <li class="hideOnMobile"><a href="./Doramas/doramas.html">Doramas</a></li>
                 
             </ul>
-            
         </nav>
 
         <script>
@@ -83,29 +64,16 @@
                 document.querySelector('.sidebar').classList.remove('open');
             }
         </script>
-
-
         <script>
-            function toggleDropdownMobile(event) {
-                event.preventDefault();
-
-                // garante que pegamos o LI mais próximo mesmo se clicar na seta ou no texto
-                const li = (event.target && event.target.closest) ? event.target.closest('li') : null;
-                if (!li) return;
-
-                // remove open de outros dropdowns (comportamento tipo accordion) — opcional
-                const sidebar = li.closest('.sidebar');
-                if (sidebar) {
-                    const others = sidebar.querySelectorAll('.dropdown-mobile.open');
-                    others.forEach(item => {
-                        if (item !== li) item.classList.remove('open');
-                    });
-                }
-
-                // alterna
-                li.classList.toggle('open');
+            function showSidebar(){
+                document.querySelector('.sidebar').style.display = 'flex';
             }
+
+            function hideSidebar(){
+                document.querySelector('.sidebar').style.display = 'none';
+        }
         </script>
+
     </header>
 
 <!----------------section 1-------------------->
