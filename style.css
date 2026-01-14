@@ -97,7 +97,7 @@ p, h1, h2 {
 
 /*------------SECTION 2--------------*/
 
-.noticias {
+/*.noticias {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -108,97 +108,94 @@ p, h1, h2 {
     width: 100%;
 }
 
-.noticias > .news > div {
-    width: 100%;
+.noticias > div {
     height: auto;
     padding: 16px;
 
 }
 
-.noticias > .news > div > img {
-    width: 100%;
+.noticias > div > img {
     height: auto;
     padding-bottom: 8px;
 }
 
-.noticias > .news > div > .capa1 {
-    width: 100%;
+.noticias > div > .capa1 {
     height: auto;
     padding-bottom: 8px;
     
 }
 
-.noticias > .news > div > .capa2 {
+.noticias > div > .capa2 {
         display: none;
     }
 
-.noticias > .news > div > h2 {
+.noticias > div > h2 {
     font-size: 1em;
     padding-bottom: 6px;
     color: var(--color8);
 
 }
 
-.noticias > .news > div > h2 > a {
+.noticias > div > h2 > a {
     color: var(--color6);
 }
 
-.noticias > .news > div > h2 > a:hover {
+.noticias > div > h2 > a:hover {
     color: var(--color4);
 }
 
-.noticias > .news > div > h1 {
+.noticias > div > h1 {
     font-size: 1.5em;
 }
 
-.noticias > .news > div > h1 > a {
+.noticias > div > h1 > a {
     color: var(--color5);
 }
 
-.noticias > .news > div > h1 > a:hover {
+.noticias > div > h1 > a:hover {
     color: #b99470;
 }
+*/
 
-
-.perfil {
+.noticias > .artigos > .art.horizont {
     display: flex;
-    flex-direction: column;
-    padding: 16px;
-    border: 2px solid var(--color4);
-    padding: 24px;
-}
-.perfil > img {
-    width: 60%;
-    margin: 0 auto;
-    padding-bottom: 32px;
-    
-}
-
-
-.perfil > p {
-    font-size: 1em;
-    padding-bottom: 16px;
-    text-align:justify;
-}
-
-.perfil > ul {
-    list-style: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: stretch;
-    padding: 16px 0;
-    display: flex;
-    gap: 24px;
+    gap: 16px;
+    width: 100%;
 }
 
-.perfil > ul > li {
-    text-align: center;
+.artigos > .art.horizont > .grid-wrapper > img {
+    height: auto;
+    padding-bottom: 8px;
 }
 
-.perfil > ul > li > a > svg {
-    height: 24px;
-    width: 24px;
+.artigos > .art.horizont > .grid-wrapper > h2 {
+    font-size: 1em;
+    padding-bottom: 6px;
+    color: var(--color8);
+
+}
+
+.artigos > .art.horizont > .grid-wrapper > h2 > a {
     color: var(--color6);
-    background-color: var(--color1);
-    border-radius: 50%;
+}
+
+.art.horizont > .grid-wrapper > h2 > a:hover {
+    color: var(--color4);
+}
+
+.art.horizont > .grid-wrapper > h1 {
+    font-size: 1.5em;
+}
+
+.art.horizont > .grid-wrapper > h1 > a {
+    color: var(--color5);
+}
+
+.art.horizont > .grid-wrapper > h1 > a:hover {
+    color: #b99470;
 }
 
 /*-------------------------------------------------*/
@@ -206,89 +203,15 @@ p, h1, h2 {
 @media screen and (min-width: 481px) {
 
     .noticias {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .noticias > .news {
-        width: 70%;
-    }
-
-    .noticias > .news > div {
-        padding: 0 16px 24px 16px;
-
-    }
-
-    .noticias > .perfil {
-        width: 30%;
-        border: 2px solid var(--color4);
-        padding: 16px;
-    }
-    
-    .perfil > img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 12px;
+    padding: 24px 12px;
+    justify-items: center;
     width: 100%;
-    margin: 0 auto;
-    padding-bottom: 16px;
-    
+    justify-content: space-between;
     }
-
-    .perfil > p {
-    font-size: .9em;
-    padding-bottom: 16px;
-    text-align: center;
-    }
-
-} 
-
-
-@media screen and (min-width: 769px) {
-
-    .noticias > .news {
-        width: 80%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-    }
-
-    .noticias > .news > .grid-wrapper1 {
-        grid-column: 1/3;
-    }
-
-    .noticias > .news > div > img {
-        width: 100%;
-        height: auto;
-    }
-
-    .noticias > .news > div > .capa1 {
-        display: none;
-    }
-
-    .noticias > .news > div > .capa2 {
-        display: block;
-        width: 100%;
-        height: auto;
-        padding-bottom: 8px;
-    }
-
-    .noticias > .perfil {
-        width: 20%;
-        border: 2px solid var(--color4);
-        padding: 16px;
-    }
-
-    .noticias > .news > div > h2 {
-        font-size: 1em;
-    }
-
-    .noticias > .news > div > h1 {
-        font-size: 1.5em;
-    }
-
-    .perfil > p {
-        font-size: .9em;
-    }
-
-
 }
-
 
